@@ -1,6 +1,7 @@
 import { Navbar } from "./components";
 import { Header } from "./containers";
 import { About } from "./containers";
+import { Work } from "./containers";
 import "./App.scss";
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Navbar />
       <Header />
       <About />
+      <Work />
     </div>
   );
 }
