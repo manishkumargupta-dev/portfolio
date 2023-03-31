@@ -166,13 +166,16 @@
 }
 
 .app__header-img {
-  flex: 1;
-  height: 100%;
+  width: 300px;
+  height: 300px;
 
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
   position: relative;
+  overflow: hidden;
+  background-size: cover;
+
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  border-radius: 48% 52% 52% 48% / 38% 21% 79% 62%;
+  animation: blob 3.7s linear infinite;
 
   img {
     width: 100%;
@@ -180,17 +183,25 @@
     z-index: 1;
   }
 
-  .overlay_circle {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 0;
-    width: 100%;
-    height: 90%;
-  }
-
   @media screen and (max-width: 1200px) {
     margin: 2rem 0;
+  }
+}
+@keyframes blob {
+  0%,
+  100% {
+    border-radius: 51% 49% 49% 51% / 51% 54% 46% 49%;
+  }
+
+  25% {
+    border-radius: 61% 39% 63% 37% / 34% 58% 42% 66%;
+  }
+
+  50% {
+    border-radius: 71% 29% 73% 27% / 28% 68% 32% 72%;
+  }
+
+  75% {
+    border-radius: 65% 35% 21% 79% / 60% 50% 50% 40%;
   }
 }
